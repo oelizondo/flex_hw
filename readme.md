@@ -107,6 +107,13 @@ make run_example
 which grabs an example file and runs it through and outputs the result.
 You can change this directly in the Makefile to adjust your needs.
 
+### Generatign an external file
+Put this in your makefile 
+```
+./formatter < index.html > formatted.html
+```
+the last section ```> formatted.html``` will create a new file based on the terminal output.
+
 ### Actual HW
 Checkout the ```index.html``` provided, notice how some elements, such as ```meta```, ```title```, and ```p``` are indented inside other tags. These tags open and close, such as ```<p> </p>```. Essentially, the script must indent _anything_ that's inside the ```html``` tags. Indents are 2-spaces tabs.
 
