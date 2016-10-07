@@ -759,7 +759,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 64 "formatter.l"
+#line 62 "formatter.l"
 
 
 #line 766 "lex.yy.c"
@@ -848,54 +848,54 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 66 "formatter.l"
+#line 64 "formatter.l"
 { continue; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 68 "formatter.l"
+#line 66 "formatter.l"
 { printf("%s \n", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 70 "formatter.l"
+#line 68 "formatter.l"
 { printf("%s \n", yytext); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 72 "formatter.l"
+#line 70 "formatter.l"
 { printf("%s \n", yytext); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 74 "formatter.l"
+#line 72 "formatter.l"
 { openingTagPrint(); }
 	YY_BREAK
 case 6:
 /* rule 6 can match eol */
 YY_RULE_SETUP
-#line 76 "formatter.l"
+#line 74 "formatter.l"
 { openingTagPrint(); }
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 78 "formatter.l"
+#line 76 "formatter.l"
 { wordPrint(); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 80 "formatter.l"
+#line 78 "formatter.l"
 { closingTagPrint(); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 82 "formatter.l"
+#line 80 "formatter.l"
 { wordPrint(); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 84 "formatter.l"
+#line 82 "formatter.l"
 ECHO;
 	YY_BREAK
 #line 902 "lex.yy.c"
@@ -1895,7 +1895,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 84 "formatter.l"
+#line 82 "formatter.l"
 
 
 

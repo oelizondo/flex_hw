@@ -49,9 +49,7 @@ INLINESTYLE ([a-z\ A-Z0-9]*=\"[\#a-zA-Z\ \_\&\-\:\.\/\/\0-9a-z\;]*\"*)*
 
 HTML html
 EXCEPTIONTAGS meta
-INLINETAG strong|EM
 TAGS head|body|div|ul|font|p|h1|h2|h3|title|li|table|th|tr|td|a|strong|EM
-ANCHOR a
 
 OHTML <{HTML}>
 CHTML <\/{HTML}>
