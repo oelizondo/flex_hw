@@ -13,7 +13,7 @@ By default, ```make build``` will output an executable named ```formatter```, th
 to start the application.
 
 ### Clean
-´´´console
+```console
 make clean
 ```
 will remove the executable and the ```lex``` file.
@@ -28,7 +28,7 @@ If you're using cygwin just change ```gcc -o formatter lex.yy.c -ll``` to ```gcc
 
 ### Starting out with flex.
 
-A flex file (extension ```l```) has 3 main sections:
+A flex file (extension ```.l```) has 3 main sections:
 
 * definitions
 * rules
@@ -47,7 +47,20 @@ We set one definition for ```TAGS``` which maps (the most mainstream) html tags,
 
 We set ```OHTML``` as _Opening HTML_, we need to match against the literal tag, so we use ```<{TAGS}>``` where ```<>``` is any HTML syntax and ```{TAGS}``` is the actual placemant of any TAGS defined.
 
-We do the same for ```CTHML```
+We do the same for ```CTHML```.
+
+We can do different things, what about varibales?
+```
+VARS [a-z][a-z0-9]*
+```
+Anything starting with a letter, followed by a letter or number _n_ times counts.
+
+Digits
+```
+DIGITS [0-9]
+```
+
+We can ember these rules in the rules below.
 
 ### Rules
 Rules go below a ```%%``` (double percentage symbol). This is where we want to actually do things. We set an initial rule bound to an action:
@@ -58,7 +71,7 @@ Which does exactly what we would expect it to do, if we find any opening html ta
 
 We do the same for ```CHTML```.
 
-We can do this for many thing, and we can run actual code, like functions.
+We can do this for many things, and we can run actual code, like functions.
 Example:
 
 ```c
