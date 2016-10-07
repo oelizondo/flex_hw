@@ -16,7 +16,7 @@ to start the application.
 ```console
 make clean
 ```
-will remove the executable and the ```lex``` file.
+Will remove the executable and the ```lex``` file.
 
 ### Compile and Run
 ```console
@@ -86,6 +86,26 @@ Example:
 username printUserName();
 ```
 When we type ```username``` when executing the program, we'll see _Oscar!_ instead.
+
+### User Code
+
+### Escaping characters
+This was tricky, imagine having a ```p``` tag, which was many words, you need to detect them all at once. we need to escape a ``` ``` character.
+We do
+```
+WORD [a-zA-Z\ 0-9]*
+```
+if you look closely we can see ```\ ```, this means that a _space_ is matched, and counted as a word, that means ```hello world``` would match against WORD.
+
+You can do this with ```\" content here \"``` to escape double quotes, etc.
+
+### Running with an external file
+we can run a make task
+```
+make run_example
+```
+which grabs an example file and runs it through and outputs the result.
+You can change this directly in the Makefile to adjust your needs.
 
 ### Actual HW
 Checkout the ```index.html``` provided, notice how some elements, such as ```meta```, ```title```, and ```p``` are indented inside other tags. These tags open and close, such as ```<p> </p>```. Essentially, the script must indent _anything_ that's inside the ```html``` tags. Indents are 2-spaces tabs.
